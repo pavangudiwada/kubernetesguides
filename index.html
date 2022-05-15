@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Kubernetes Simplified - Home</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="index.html">Kubernetes Simplified</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+            <a href="01Basics.html">
+              <img src="media/small/01.Basics/User2Server.png" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>01.Basics</h3>
+                <div class="summary">2 photos</div>
+              </div>
+            </a>
+            <a href="02Nodes.html">
+              <img src="media/small/02.Nodes/KubernetesControlPlane.png" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>02.Nodes</h3>
+                <div class="summary">3 photos</div>
+              </div>
+            </a>
+            <a href="03Pods.html">
+              <img src="media/small/03.Pods/KubernetesPodAbout.png" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>03.Pods</h3>
+                <div class="summary">3 photos</div>
+              </div>
+            </a>
+            <a href="04RBAC.html">
+              <img src="media/small/04.RBAC/ClusterRole.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>04.RBAC</h3>
+                <div class="summary">3 photos</div>
+              </div>
+            </a>
+            <a href="others.html">
+              <img src="media/small/others/GitOpsBasics.png" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>others</h3>
+                <div class="summary">5 photos</div>
+              </div>
+            </a>
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+      </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+      <footer>
+        <p>Made with ❤️ by Pavan Gudiwada</p>
+      </footer>
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightslider/js/lightslider.min.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+      <script id="slider-js" data-interval="">
+        $(document).ready(function () {
+          let waitTime = 1000;
+
+          try {
+            waitTime = parseInt($("#slider-js").data("interval"));
+          } catch (e) {
+            console.error("Invalid speed value for slider: " + waitTime + "\n" + e);
+          }
+
+          $("#lightSlider").lightSlider({
+            auto: true,
+            loop: true,
+            item: 1,
+            gallery: true,
+            pause: waitTime,
+            onSliderLoad: (el) => {
+              el.lightGallery({
+                selector: "#lightSlider li"
+              })
+            }
+          });
+        });
+      </script>
+
+
+  </body>
+
+</html>

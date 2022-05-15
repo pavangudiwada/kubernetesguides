@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Kubernetes Simplified - 03.Pods</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="index.html">Kubernetes Simplified</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="03Pods.html">03.Pods</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+          
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/03.Pods/KubernetesPodAbout.png"data-src="media/large/03.Pods/KubernetesPodAbout.png"data-exthumbimage="media/thumbs/03.Pods/KubernetesPodAbout.png"data-filename="KubernetesPodAbout.png"><a href="media/large/03.Pods/KubernetesPodAbout.png"><img
+                      src="media/small/03.Pods/KubernetesPodAbout.png"
+                      width="577.3532152842497"
+                      height="300"alt="KubernetesPodAbout.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/03.Pods/KubernetesPodCreation.png"data-src="media/large/03.Pods/KubernetesPodCreation.png"data-exthumbimage="media/thumbs/03.Pods/KubernetesPodCreation.png"data-filename="KubernetesPodCreation.png"><a href="media/large/03.Pods/KubernetesPodCreation.png"><img
+                      src="media/small/03.Pods/KubernetesPodCreation.png"
+                      width="453.11909262759923"
+                      height="300"alt="KubernetesPodCreation.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/03.Pods/kubernetesPodDescribed.jpg"data-src="media/large/03.Pods/kubernetesPodDescribed.jpg"data-exthumbimage="media/thumbs/03.Pods/kubernetesPodDescribed.jpg"data-filename="kubernetesPodDescribed.jpg"><a href="media/large/03.Pods/kubernetesPodDescribed.jpg"><img
+                      src="media/small/03.Pods/kubernetesPodDescribed.jpg"
+                      width="549.3942218080149"
+                      height="300"alt="kubernetesPodDescribed.jpg"/>
+              </a>
+          
+          </div>  </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+      <footer>
+        <p>Made with ❤️ by Pavan Gudiwada</p>
+      </footer>
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightslider/js/lightslider.min.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+
+  </body>
+
+</html>

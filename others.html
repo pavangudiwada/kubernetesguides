@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Kubernetes Simplified - others</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="index.html">Kubernetes Simplified</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="others.html">others</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+          
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/others/GitOpsBasics.png"data-src="media/large/others/GitOpsBasics.png"data-exthumbimage="media/thumbs/others/GitOpsBasics.png"data-filename="GitOpsBasics.png"><a href="media/large/others/GitOpsBasics.png"><img
+                      src="media/small/others/GitOpsBasics.png"
+                      width="549.3942218080149"
+                      height="300"alt="GitOpsBasics.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/others/KubernetesExtension.png"data-src="media/large/others/KubernetesExtension.png"data-exthumbimage="media/thumbs/others/KubernetesExtension.png"data-filename="KubernetesExtension.png"><a href="media/large/others/KubernetesExtension.png"><img
+                      src="media/small/others/KubernetesExtension.png"
+                      width="291.71159029649596"
+                      height="300"alt="KubernetesExtension.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/others/KubernetesLovesDatree.png"data-src="media/large/others/KubernetesLovesDatree.png"data-exthumbimage="media/thumbs/others/KubernetesLovesDatree.png"data-filename="KubernetesLovesDatree.png"><a href="media/large/others/KubernetesLovesDatree.png"><img
+                      src="media/small/others/KubernetesLovesDatree.png"
+                      width="450.3529411764706"
+                      height="300"alt="KubernetesLovesDatree.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/others/TraditionalDevOps.png"data-src="media/large/others/TraditionalDevOps.png"data-exthumbimage="media/thumbs/others/TraditionalDevOps.png"data-filename="TraditionalDevOps.png"><a href="media/large/others/TraditionalDevOps.png"><img
+                      src="media/small/others/TraditionalDevOps.png"
+                      width="300.7009345794392"
+                      height="300"alt="TraditionalDevOps.png"/>
+              </a>
+          
+          </div>      
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/others/terraformWorkflow.png"data-src="media/large/others/terraformWorkflow.png"data-exthumbimage="media/thumbs/others/terraformWorkflow.png"data-filename="terraformWorkflow.png"><a href="media/large/others/terraformWorkflow.png"><img
+                      src="media/small/others/terraformWorkflow.png"
+                      width="549.6738117427773"
+                      height="300"alt="terraformWorkflow.png"/>
+              </a>
+          
+          </div>  </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+      <footer>
+        <p>Made with ❤️ by Pavan Gudiwada</p>
+      </footer>
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightslider/js/lightslider.min.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+
+  </body>
+
+</html>
