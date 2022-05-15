@@ -1,0 +1,14 @@
+{
+  "input": "./gallery",
+  "output": "./build_output",
+  "title": "Kubernetes Simplified",
+  "sort-albums-by": "title",
+  "sort-media-by": "filename",
+  "download-photos": "copy",
+  "cleanup": true,
+  "theme": "flow",
+  "css": "./custom.css",
+  "footer": "Made with ❤️ by Pavan Gudiwada",
+  "usage-stats": true,
+  "thumb-size": 200
+}
